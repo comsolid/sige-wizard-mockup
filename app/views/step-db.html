@@ -1,0 +1,60 @@
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="host">Host</label>
+            <input type="text" name="host" class="form-control"
+                placeholder="localhost or http://sige.server.com"
+                ng-model="view.db.host">
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="form-group">
+            <label for="port">Port</label>
+            <input type="text" name="port"
+                placeholder="5432"
+                ng-model="view.db.port"
+                class="form-control">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="dbname">Database Name</label>
+            <input type="text" name="dbname"
+                placeholder="sige"
+                ng-model="view.db.dbname"
+                class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username"
+                placeholder="postgres"
+                ng-model="view.db.username"
+                class="form-control">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password"
+                placeholder="secret"
+                ng-model="view.db.password"
+                class="form-control">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="wizard.conference" class="btn btn-block btn-lg btn-primary">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

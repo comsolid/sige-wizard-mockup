@@ -9,23 +9,27 @@
  * Main module of the application.
  */
 angular
-  .module('sigeWizardApp', [
-    'ngAnimate',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  });
+    .module('sigeWizardApp', [
+        'ngAnimate',
+        'ngResource',
+        'ngRoute',
+        'ngSanitize',
+        'ui.router'
+    ])
+    .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('wizard', {
+                url: '/',
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+            })
+            .state('wizard.db', {
+                url: 'db',
+                templateUrl: 'views/step-db.html'
+            })
+            .state('wizard.conference', {
+                url: 'conference',
+                templateUrl: 'views/step-conference.html'
+            });
+        $urlRouterProvider.otherwise('db');
+  }]);

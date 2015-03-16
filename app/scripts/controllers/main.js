@@ -8,10 +8,18 @@
  * Controller of the sigeWizardApp
  */
 angular.module('sigeWizardApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', ['$scope', function ($scope) {
+        $scope.view = {
+            db: {
+                host: '',
+                port: '',
+                dbname: '',
+                username: '',
+                password: ''
+            }
+        };
+
+        $scope.install = function () {
+            console.log('Installing ...');
+        };
+    }]);
