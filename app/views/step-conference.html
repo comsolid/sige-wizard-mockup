@@ -1,2 +1,64 @@
 
-<h4>Conefrence</h4>
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            <label for="name">Conference Name</label>
+            <input type="text" name="name" class="form-control"
+                placeholder=""
+                ng-model="view.conference.name">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="codename">Codename</label>
+            <input type="text" name="codename" class="form-control"
+                placeholder=""
+                ng-model="view.conference.codename">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="starts_in">Starts in</label>
+            <input type="text" name="starts_in" class="form-control"
+                placeholder=""
+                ng-model="view.conference.starts_in">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="ends_in">Ends in</label>
+            <input type="text" name="ends_in" class="form-control"
+                placeholder=""
+                ng-model="view.conference.ends_in">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="submission_starts_in">Submission starts in</label>
+            <input type="text" name="submission_starts_in" class="form-control"
+                placeholder=""
+                ng-model="view.conference.submission_starts_in">
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="submission_ends_in">Submission ends in</label>
+            <input type="text" name="submission_ends_in" class="form-control"
+                placeholder=""
+                ng-model="view.conference.submission_ends_in">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="wizard.db" class="btn btn-block btn-lg btn-primary">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
+    </div>
+</div>

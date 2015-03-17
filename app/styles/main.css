@@ -7,13 +7,14 @@ body {
 
 /* form styling */
 #form-container {
+  background: #eeeeee;
   margin-bottom: 20px;
   border-radius: 5px;
 }
 
 #form-container .page-header {
   margin: 0;
-  padding: 30px;
+  padding-top: 30px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }

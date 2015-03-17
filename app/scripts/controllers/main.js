@@ -16,6 +16,14 @@ angular.module('sigeWizardApp')
                 dbname: '',
                 username: '',
                 password: ''
+            },
+            conference: {
+                name: '',
+                codename: '',
+                starts_in: '',
+                ends_in: '',
+                submission_starts_in: '',
+                submission_ends_in: ''
             }
         };
 
