@@ -24,6 +24,14 @@ angular.module('sigeWizardApp')
                 ends_in: '',
                 submission_starts_in: '',
                 submission_ends_in: ''
+            },
+            email: {
+                type: 'smtp',
+                host: 'smtp.gmail.com',
+                port: 587,
+                auth: 'login',
+                username: '',
+                password: ''
             }
         };
 

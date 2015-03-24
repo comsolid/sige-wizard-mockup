@@ -30,6 +30,10 @@ angular
             .state('wizard.conference', {
                 url: 'conference',
                 templateUrl: 'views/step-conference.html'
+            })
+            .state('wizard.email', {
+                url: 'email',
+                templateUrl: 'views/step-email.html'
             });
         $urlRouterProvider.otherwise('db');
   }]);
