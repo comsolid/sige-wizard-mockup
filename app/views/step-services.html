@@ -1,0 +1,52 @@
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="twitter.username">Twitter Username</label>
+            <input type="text" id="twitter.username"
+                class="form-control"
+                placeholder="Optional"
+                ng-model="view.services.twitter.username">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="twitter.hashtags">Twitter Hashtags</label>
+            <input type="text" id="twitter.hashtags"
+                class="form-control"
+                placeholder="Optional"
+                ng-model="view.services.twitter.hashtags">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="slideshare.api_key">Slideshare API Key</label>
+            <input type="text" id="slideshare.api_key"
+                class="form-control"
+                placeholder="Optional"
+                ng-model="view.services.slideshare.api_key">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="slideshare.shared_secret">Slideshare Shared Secret</label>
+            <input type="text" id="slideshare.shared_secret"
+                class="form-control"
+                placeholder="Optional"
+                ng-model="view.services.slideshare.shared_secret">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <button ng-click="install()" class="btn btn-block btn-lg btn-danger">
+            Install <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </button>
+    </div>
+</div>

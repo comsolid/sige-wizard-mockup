@@ -1,4 +1,8 @@
 
+<p class="text-danger">
+    Only works with PostgreSQL Database!
+</p>
+
 <div class="row">
     <div class="col-md-6">
         <div class="form-group">
@@ -46,6 +50,12 @@
                 ng-model="view.db.password"
                 class="form-control">
         </div>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-danger" style="margin-top: 25px;">
+            <i class="fa fa-database"></i>
+            Test Connection
+        </button>
     </div>
 </div>
 

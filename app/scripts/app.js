@@ -34,6 +34,10 @@ angular
             .state('wizard.email', {
                 url: 'email',
                 templateUrl: 'views/step-email.html'
+            })
+            .state('wizard.services', {
+                url: 'services',
+                templateUrl: 'views/step-services.html'
             });
         $urlRouterProvider.otherwise('db');
   }]);

@@ -19,7 +19,7 @@
     <div class="col-md-2">
         <div class="form-group">
             <label for="port">Port</label>
-            <select class="form-control" ng-model="view.email.port">
+            <select class="form-control" id="port" ng-model="view.email.port">
                 <option value="587">587</option>
                 <option value="465">465</option>
             </select>
@@ -45,7 +45,7 @@
         </div>
     </div>
     <div class="col-md-1">
-        <button class="btn btn-default" style="margin-top: 25px;">
+        <button class="btn btn-default" style="margin-top: 25px;" ng-click="copyEmail()">
             <i class="fa fa-copy"></i>
         </button>
     </div>
@@ -56,5 +56,73 @@
                 class="form-control"
                 ng-model="view.email.password">
         </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="form-group">
+            <label for="ssl">Transport protocol</label>
+            <select class="form-control" id="ssl" ng-model="view.email.ssl">
+                <option value="tls">TLS</option>
+                <option value="ssl">SSL</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="checkbox">
+            <label style="margin-top: 20px;">
+                <input type="checkbox" ng-model="view.email.register">
+                Register?
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="from.email">From: Default E-mail</label>
+            <input type="text" id="from.email"
+                class="form-control"
+                ng-model="view.email.from.email">
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="from.name">From: Default Name</label>
+            <input type="text" id="from.name"
+                class="form-control"
+                ng-model="view.email.from.name">
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="reply.email">Reply: Default E-mail</label>
+            <input type="text" id="reply.email"
+                class="form-control"
+                ng-model="view.email.reply.email">
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="form-group">
+            <label for="reply.name">Reply: Default Name</label>
+            <input type="text" id="reply.name"
+                class="form-control"
+                ng-model="view.email.reply.name">
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="form-group row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <a ui-sref="wizard.services" class="btn btn-block btn-lg btn-primary">
+            Next Section <span class="glyphicon glyphicon-circle-arrow-right"></span>
+        </a>
     </div>
 </div>

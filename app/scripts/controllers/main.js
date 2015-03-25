@@ -31,11 +31,37 @@ angular.module('sigeWizardApp')
                 port: 587,
                 auth: 'login',
                 username: '',
-                password: ''
+                password: '',
+                register: true,
+                ssl: 'tls',
+                from: {
+                    email: '',
+                    name: ''
+                },
+                reply: {
+                    email: '',
+                    name: ''
+                }
+            },
+            services: {
+                twitter: {
+                    username: '',
+                    hashtags: ''
+                },
+                slideshare: {
+                    api_key: '',
+                    shared_secret: ''
+                }
             }
         };
 
         $scope.install = function () {
             console.log('Installing ...');
+        };
+
+        $scope.copyEmail = function () {
+            var email = $scope.view.email.username;
+            $scope.view.email.from.email = email;
+            $scope.view.email.reply.email = email;
         };
     }]);
